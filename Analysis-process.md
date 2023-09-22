@@ -1,6 +1,3 @@
-*This file contains all the processes from data preparation to results
-output*
-
 # 1 Filtering Species data
 
     library(auk)
