@@ -1,0 +1,133 @@
+site_name: stemflow
+site_description: 'A package for Adaptive Spatio-Temporal Model (AdaSTEM) in python.'
+repo_name: 'chenyangkang/stemflow'
+repo_url: 'https://github.com/chenyangkang/stemflow'
+site_url: https://chenyangkag.github.io/stemflow/
+use_directory_urls: false
+
+theme:
+  name: material
+  icon:
+      repo: 'fontawesome/brands/github'
+  features:
+    # - toc.follow
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - search.share
+    - navigation.indexes
+    - navigation.expand
+
+
+  language: en
+
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      accent: light green
+      primary: green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      accent: light green
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  font:
+    text: Open Sans
+  logo: logo.png
+  favicon: logo.png
+
+plugins:
+  - social
+  - mkdocs-jupyter
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            # inherited_members: true
+            docstring_style: google
+            docstring_section_style: list
+            # show_object_full_path: true
+            # show_root_full_path: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/chenyangkang
+    # - icon: fontawesome/brands/twitter
+    #   link: https://twitter.com/TheJamesWillett
+    # - icon: fontawesome/brands/linkedin
+    #   link: https://www.linkedin.com/in/willettjames/
+
+    
+nav:
+  - Home: index.md
+  - Examples:
+    - Examples/00.Mini_test.ipynb
+    - Examples/01.AdaSTEM_demo.ipynb
+    - Examples/02.AdaSTEM_learning_curve_analysis.ipynb
+    - Examples/03.Binding_with_Maxent.ipynb
+    - Examples/04.Prediction_visualization.ipynb
+    - Examples/05.Hurdle_in_ada_or_ada_in_hurdle.ipynb
+    - Examples/06.Base_model_choices.ipynb
+    - Examples/07.Optimizing_Stixel_Size.ipynb
+  - API Documentation:
+    - stemflow.model:
+      - 'AdaSTEM': API_Documentation/stemflow.model.AdaSTEM.md
+      - 'static_func_AdaSTEM': API_Documentation/stemflow.model.static_func_AdaSTEM.md
+      - 'Hurdle': API_Documentation/stemflow.model.Hurdle.md
+      - 'dummy_model': API_Documentation/stemflow.model.dummy_model.md
+      - 'special_hurdle': API_Documentation/stemflow.model.special_hurdle.md
+    - stemflow.utils:
+      - 'quadtree': API_Documentation/stemflow.utils.quadtree.md
+      - 'plot_gif': API_Documentation/stemflow.utils.plot_gif.md
+      - 'generate_soft_colors': API_Documentation/stemflow.utils.generate_soft_colors.md
+    - stemflow.model_selection: API_Documentation/stemflow.model_selection.md
+    - stemflow.mini_test: API_Documentation/stemflow.mini_test.md
+  - Fun Visualization:
+    - 'Global Bird Diversity': Fun_Visualization/Global_Bird_Shannon_H_Index.md
+    - 'Global NDVI': Fun_Visualization/Global_NDVI.md
+    - 'Ruby-crowned_Kinglet': Fun_Visualization/Ruby-crowned_Kinglet_2020.md
+
+  # - Download mini data: mini_data/mini_data.csv
+
+markdown_extensions:
+  - tables
+  - toc:
+      toc_depth : "1-1"
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.tilde
+
+extra_css:
+  - css/extra.css
+
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/chenyangkang"  target="_blank" rel="noopener">Yangkang Chen</a>
