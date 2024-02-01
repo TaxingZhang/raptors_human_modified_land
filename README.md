@@ -1,4 +1,4 @@
-# A quantitative evaluation of the impacts of human land modification on raptors globally
+# Quantitative evaluation of the global impacts of human land modification on raptors
 *Taxing Zhang, Yu Xu, and Jianghong Ran*
 
 ## 1. The folder "data" contains some of the data needed for the analysis, and the complete species data for the analysis can be downloaded from ebird.
